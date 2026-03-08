@@ -1,0 +1,58 @@
+{
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "memory": "512",
+  "networkMode": "awsvpc",
+  "placementConstraints": [],
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "513129860875.dkr.ecr.us-east-2.amazonaws.com/docker-flask-redis:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000,
+          "protocol": "tcp",
+          "name": "web-5000-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "REDIS_PORT",
+          "value": "6379"
+        },
+        {
+          "name": "REDIS_HOST",
+          "value": "docker-flask-redis-cache-nmdwuu.serverless.use2.cache.amazonaws.com"
+        }
+      ],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/docker-flask-redis-task",
+          "awslogs-create-group": "true",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "cpu": "256",
+  "executionRoleArn": "arn:aws:iam::513129860875:role/ecsTaskExecutionRole",
+  "volumes": [],
+  "family": "docker-flask-redis-task",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  }
+}

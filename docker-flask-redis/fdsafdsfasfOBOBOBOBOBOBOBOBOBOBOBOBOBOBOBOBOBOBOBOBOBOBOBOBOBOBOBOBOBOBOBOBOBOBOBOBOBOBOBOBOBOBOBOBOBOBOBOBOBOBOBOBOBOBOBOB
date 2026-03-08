@@ -1,0 +1,649 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-2:513129860875:service/docker-flask-redis-cluster/docker-flask-redis-service",
+        "serviceName": "docker-flask-redis-service",
+        "clusterArn": "arn:aws:ecs:us-east-2:513129860875:cluster/docker-flask-redis-cluster",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 1,
+        "pendingCount": 0,
+        "capacityProviderStrategy": [
+            {
+                "capacityProvider": "FARGATE",
+                "weight": 1,
+                "base": 0
+            }
+        ],
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-2:513129860875:task-definition/docker-flask-redis-task:2",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": true,
+                "rollback": true
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 100,
+            "strategy": "ROLLING",
+            "bakeTimeInMinutes": 0
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/9042261267179420499",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-2:513129860875:task-definition/docker-flask-redis-task:2",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2026-02-26T17:15:05.055000-06:00",
+                "updatedAt": "2026-02-26T17:15:05.055000-06:00",
+                "capacityProviderStrategy": [
+                    {
+                        "capacityProvider": "FARGATE",
+                        "weight": 1,
+                        "base": 0
+                    }
+                ],
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-02ba53eb74ffdc8df",
+                            "subnet-07a60dda87b4718ba",
+                            "subnet-087b673342ab8a8cb"
+                        ],
+                        "securityGroups": [
+                            "sg-0a230d2485c5f0e94"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/9042261267179420499 in progress."
+            },
+            {
+                "id": "ecs-svc/3378902505775611637",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-2:513129860875:task-definition/docker-flask-redis-task:2",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2026-02-26T17:10:41.528000-06:00",
+                "updatedAt": "2026-02-26T17:14:56.678000-06:00",
+                "capacityProviderStrategy": [
+                    {
+                        "capacityProvider": "FARGATE",
+                        "weight": 1,
+                        "base": 0
+                    }
+                ],
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-02ba53eb74ffdc8df",
+                            "subnet-07a60dda87b4718ba",
+                            "subnet-087b673342ab8a8cb"
+                        ],
+                        "securityGroups": [
+                            "sg-0a230d2485c5f0e94"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/3378902505775611637 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::513129860875:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "ae9601d0-ff72-48dd-90ef-46a655bab724",
+                "createdAt": "2026-02-26T17:14:56.683000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "3a0df2a0-553b-4489-856b-0f9477032920",
+                "createdAt": "2026-02-26T17:14:56.682000-06:00",
+                "message": "(service docker-flask-redis-service) (deployment ecs-svc/3378902505775611637) deployment completed."
+            },
+            {
+                "id": "3d091ea4-f085-45d1-b3b5-35174555e762",
+                "createdAt": "2026-02-26T17:12:22.227000-06:00",
+                "message": "(service docker-flask-redis-service) has stopped 1 running tasks: (task 5e295f5637fa45538d2baf55acc3d64d)."
+            },
+            {
+                "id": "6d0a9d96-06c6-4ac5-947b-16de2bdfb739",
+                "createdAt": "2026-02-26T17:11:11.511000-06:00",
+                "message": "(service docker-flask-redis-service) has started 1 tasks: (task e42eeb1a0cad47e08d4244d519aad7e2)."
+            },
+            {
+                "id": "acf562ef-57a3-49da-aa80-c9ec54a488db",
+                "createdAt": "2026-02-26T15:39:34.514000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b67ef771-be25-4a90-8c5e-a80d6bbb0e0b",
+                "createdAt": "2026-02-26T09:39:32.141000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "a396f5f0-4a8d-4056-a6b3-54ec6ae63510",
+                "createdAt": "2026-02-26T05:58:16.004000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f4be6602-b2c4-4d16-91ec-fc658f632de8",
+                "createdAt": "2026-02-25T23:57:49.838000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "0ed761db-1ee2-4c4e-b142-be0d37ba7255",
+                "createdAt": "2026-02-25T17:57:35.465000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "697c00f5-95d0-4fb4-ad82-5631f1755b56",
+                "createdAt": "2026-02-25T11:57:33.991000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "6112b94a-a1d0-4ccc-a671-a61c216fdbe7",
+                "createdAt": "2026-02-25T08:49:44.422000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f6a50f84-7731-497c-9f18-7076be05a10c",
+                "createdAt": "2026-02-25T03:41:30.398000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ee7d50be-c0da-4e4a-af4a-c064a47b7b76",
+                "createdAt": "2026-02-24T21:41:06.760000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ae64426e-5496-46a1-b332-4bfd46bbbe77",
+                "createdAt": "2026-02-24T15:40:46.994000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f04c0856-2cea-43b2-abb5-47098febe69f",
+                "createdAt": "2026-02-24T09:40:17.879000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "4babdd0f-aa96-4645-940d-686ae7c0198b",
+                "createdAt": "2026-02-24T08:40:01.235000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "900a291d-e894-4845-8db8-8dfd66340050",
+                "createdAt": "2026-02-24T08:21:14.627000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "662cb5be-d9bd-4bc8-9c2c-9d7a510924b8",
+                "createdAt": "2026-02-24T07:24:10.432000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "95ff8f34-f862-4dae-a266-144e64a479d9",
+                "createdAt": "2026-02-24T01:23:43.477000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b9e35951-6ece-40cc-b772-332511019e73",
+                "createdAt": "2026-02-23T19:23:42.643000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "d7ccabac-86f8-4ef5-ae9f-b45a71a70cf2",
+                "createdAt": "2026-02-23T13:23:13.155000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "31a9c822-ae87-4e19-a893-fd546d771895",
+                "createdAt": "2026-02-23T13:14:19.146000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "d07b22eb-2cd0-4e05-9ff3-f1d4f131e778",
+                "createdAt": "2026-02-23T07:13:55.051000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "e00e20e5-53de-4023-87d0-a3669b9b8b68",
+                "createdAt": "2026-02-23T01:16:20.879000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "5e8281dc-239a-4b52-be38-e4a4bdae3eba",
+                "createdAt": "2026-02-22T19:16:06.963000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "5d26d91f-e135-4055-bbf1-056d3bbb87ad",
+                "createdAt": "2026-02-22T13:15:45.337000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "7543a382-aebb-4ac1-a46b-18bd9b4606ad",
+                "createdAt": "2026-02-22T07:15:26.226000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "bac65e80-5dbb-458d-a4ca-4567db395aff",
+                "createdAt": "2026-02-22T01:15:01.192000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "8f20fa7d-1110-402c-8d77-b67a023e69fc",
+                "createdAt": "2026-02-21T19:14:32.300000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "e64b3c05-b7a1-4b98-abd8-a00d541bac20",
+                "createdAt": "2026-02-21T13:14:21.567000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ce3fde48-7c97-43cf-913e-7479c6b56d71",
+                "createdAt": "2026-02-21T07:13:59.269000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "2274ac48-5d4e-472e-b868-37799b2e752c",
+                "createdAt": "2026-02-21T01:13:56.753000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b6221ece-20e0-4b45-9d00-7559509ca22d",
+                "createdAt": "2026-02-20T19:13:40.371000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "4b16e104-8621-4989-806f-e33c8a2a6d37",
+                "createdAt": "2026-02-20T13:13:31.347000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "3b774a35-70a1-48ae-94bb-419231aa499c",
+                "createdAt": "2026-02-20T11:31:51.183000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "758721b4-d967-42e4-9148-ad2cfb906010",
+                "createdAt": "2026-02-20T05:31:32.138000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "9a15f805-38fa-4315-9790-f7d6e0320d5b",
+                "createdAt": "2026-02-19T23:31:25.320000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "3b5d6e59-d41d-4a55-9686-4531e9a35214",
+                "createdAt": "2026-02-19T17:31:06.068000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b01306eb-6cae-49ac-851d-9132b98b026e",
+                "createdAt": "2026-02-19T11:30:45.639000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "807f5ac2-b5cf-47e8-93bd-1868240fd973",
+                "createdAt": "2026-02-19T09:57:58.989000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "7b5e8911-47fc-4b31-9f3a-b1ad5feece8e",
+                "createdAt": "2026-02-19T03:57:44.026000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "daf468f2-233e-4b01-8cee-a3e911bbaada",
+                "createdAt": "2026-02-18T21:57:43.455000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "eb9e0d97-e48f-4b6b-ac3c-7038d4048a8d",
+                "createdAt": "2026-02-18T15:57:12.104000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "a87aa15a-6fd3-40ab-99b6-184084efe892",
+                "createdAt": "2026-02-18T09:56:58.622000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "c3bcebb0-f960-4ebb-92c1-7b282c734171",
+                "createdAt": "2026-02-18T03:56:55.759000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "5e327493-9403-4d1a-bed0-084885f73a04",
+                "createdAt": "2026-02-17T21:56:28.568000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "161094d6-4ffe-420e-94b6-2bc45673115a",
+                "createdAt": "2026-02-17T15:56:19.957000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b7b621b7-5076-481d-96aa-eae802c95864",
+                "createdAt": "2026-02-17T09:55:49.289000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "c7f077af-ad11-45f5-832e-bb7f3e4eb82f",
+                "createdAt": "2026-02-17T03:55:45.056000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "e4227ea6-9015-4950-9f72-e9ee8b0c9dbe",
+                "createdAt": "2026-02-16T21:55:24.082000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "4f1ade77-900e-491f-9d61-8e1d2745359c",
+                "createdAt": "2026-02-16T15:54:56.610000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f04b0866-3010-45a0-b10f-eef41fcbbe2e",
+                "createdAt": "2026-02-16T09:54:31.768000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "8cd75b28-7e24-4dee-bec8-3e0d79c0d943",
+                "createdAt": "2026-02-16T03:54:24.043000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "e9db78e5-94ca-4f20-8dc2-fc0300baea90",
+                "createdAt": "2026-02-15T21:54:00.836000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "a4ffc37f-c100-4f31-beeb-61aa513ec0d0",
+                "createdAt": "2026-02-15T15:53:43.552000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "31afb1e6-de26-4ee1-b561-8074d942d2e6",
+                "createdAt": "2026-02-15T09:53:17.548000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "78c84baf-a7d8-4ed5-ba6f-681ad6f42c15",
+                "createdAt": "2026-02-15T03:53:04.792000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "518c0aff-b32e-4091-bd87-e555b2462c74",
+                "createdAt": "2026-02-14T21:52:53.593000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ac42e84a-a282-43eb-b0b5-400799cdbc4a",
+                "createdAt": "2026-02-14T15:52:28.293000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f0e8e71a-a76b-4b78-b54c-8b90cebb4fbb",
+                "createdAt": "2026-02-14T09:52:13.098000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "33f3707a-6d8d-4111-9ef5-b8d82392947a",
+                "createdAt": "2026-02-14T03:51:53.368000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "c1902c21-3a28-4595-81d2-a16f2d9d8a29",
+                "createdAt": "2026-02-13T21:51:31.475000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b9f93d72-3444-4300-9970-5499c0801e88",
+                "createdAt": "2026-02-13T15:51:16.268000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "319a4598-9917-4810-9dab-c19eab954468",
+                "createdAt": "2026-02-13T09:50:58.277000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "9fcc65da-879a-45cb-9806-acfd1e0fa90a",
+                "createdAt": "2026-02-13T03:50:26.448000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b8593346-faa5-4d56-8796-bc3196f25c24",
+                "createdAt": "2026-02-12T21:50:12.881000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f7d09150-493d-42e2-97c5-25aa5b417388",
+                "createdAt": "2026-02-12T15:51:33.632000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "9183d937-023a-4102-9f66-cdee24af0a47",
+                "createdAt": "2026-02-12T15:51:33.631000-06:00",
+                "message": "(service docker-flask-redis-service) (deployment ecs-svc/9205005127147405111) deployment completed."
+            },
+            {
+                "id": "3a53a9c2-5a6a-4a8b-a630-ae9e200f6309",
+                "createdAt": "2026-02-12T15:48:59.249000-06:00",
+                "message": "(service docker-flask-redis-service) has stopped 1 running tasks: (task 932ee441db274b8bb42a5209a1b2bd49)."
+            },
+            {
+                "id": "8b3a978e-6c52-4b26-bd1a-73425b265a46",
+                "createdAt": "2026-02-12T15:47:49.001000-06:00",
+                "message": "(service docker-flask-redis-service) has started 1 tasks: (task 5e295f5637fa45538d2baf55acc3d64d)."
+            },
+            {
+                "id": "4628d08d-e426-4159-8d2f-e2bcb4d64a5d",
+                "createdAt": "2026-02-12T15:46:46.633000-06:00",
+                "message": "(service docker-flask-redis-service) stopped 1 pending tasks."
+            },
+            {
+                "id": "fc0f9b98-5c57-4f0d-9d1d-881952ce17cf",
+                "createdAt": "2026-02-12T15:46:26.818000-06:00",
+                "message": "(service docker-flask-redis-service) has started 1 tasks: (task df242b3ea5b241038c81c56b2696d1dd)."
+            },
+            {
+                "id": "9fdb296c-17c2-44fb-93fd-cb8f97f35008",
+                "createdAt": "2026-02-12T10:20:59.063000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "77387e02-a14b-4265-bc5d-8f41088cc786",
+                "createdAt": "2026-02-12T04:20:52.621000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "c21566e7-f62a-4c13-81b5-2a66bd627559",
+                "createdAt": "2026-02-11T22:20:38.320000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "d427055c-d7aa-449b-a7cc-d7decefc8c60",
+                "createdAt": "2026-02-11T16:20:31.776000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "e6cd7d92-4bf2-44ec-9476-a0123e6b5faf",
+                "createdAt": "2026-02-11T10:20:13.564000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "a2627151-c00b-4ae0-b787-3a730d18002a",
+                "createdAt": "2026-02-11T04:20:04.841000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "a62d5134-7ba4-46ad-be01-46424dc8fba4",
+                "createdAt": "2026-02-10T22:19:52.368000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "914ea0d8-ac9b-4f18-bab2-ae40fb758e75",
+                "createdAt": "2026-02-10T16:19:28.600000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b5932829-70d9-4464-bd41-5216ac8ec682",
+                "createdAt": "2026-02-10T10:19:13.821000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "1be4d577-b063-4922-a814-35c7af51bc23",
+                "createdAt": "2026-02-10T04:18:51.316000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ddfc9306-b758-4377-81b9-cf762f99f6d9",
+                "createdAt": "2026-02-09T22:18:39.273000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "3997ffba-3aaf-4f45-9119-4e93551d5546",
+                "createdAt": "2026-02-09T16:18:24.366000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "dde1f338-859e-4252-9814-a91dac3717d8",
+                "createdAt": "2026-02-09T10:17:56.974000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "ca812ca2-4091-43f8-92cc-3fc6b04fc2ae",
+                "createdAt": "2026-02-09T04:17:52.644000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "3b897f03-04d4-42f2-8ea1-fba5a02c6d8c",
+                "createdAt": "2026-02-08T22:17:44.717000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "03f10dbc-bdd4-4c2a-947a-31dced6329cf",
+                "createdAt": "2026-02-08T16:17:34.975000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "36a40b9d-3790-4474-afb4-cfd559209dd2",
+                "createdAt": "2026-02-08T10:17:27.505000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "6d91c671-5bcd-4fee-9a31-9e36b64fafd7",
+                "createdAt": "2026-02-08T04:17:08.093000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "d775ebd8-1ec3-4835-a93a-e77d406f5dbc",
+                "createdAt": "2026-02-07T22:16:48.913000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "d2c197ce-0a0f-486e-b5cb-d03551645b83",
+                "createdAt": "2026-02-07T16:16:36.227000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "979abb4e-12a2-47f1-ae6b-283e6d26f6cf",
+                "createdAt": "2026-02-07T10:16:07.946000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "f216a18d-779e-4eca-b257-b07eb55acefe",
+                "createdAt": "2026-02-07T04:15:49.289000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "aa1891c5-6400-450c-9bfe-7088444842a8",
+                "createdAt": "2026-02-06T22:15:47.972000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "fbc57716-950a-4f70-8def-3eb606b54143",
+                "createdAt": "2026-02-06T21:58:11.205000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "c6a507f2-4c63-48f6-a61a-0689cfbc6aad",
+                "createdAt": "2026-02-06T17:51:13.974000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "5839db9a-855e-4276-ac79-06e8f7888e36",
+                "createdAt": "2026-02-06T14:03:23.310000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b1012a3c-b339-4353-a875-d2af5c9c5433",
+                "createdAt": "2026-02-06T08:02:57.836000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            },
+            {
+                "id": "b7e58363-3caf-466a-a430-926a8e74d490",
+                "createdAt": "2026-02-06T02:02:39.461000-06:00",
+                "message": "(service docker-flask-redis-service) has reached a steady state."
+            }
+        ],
+        "createdAt": "2026-01-14T15:47:48.476000-06:00",
+        "currentServiceRevisions": [
+            {
+                "arn": "arn:aws:ecs:us-east-2:513129860875:service-revision/docker-flask-redis-cluster/docker-flask-redis-service/9042261267179420499",
+                "requestedTaskCount": 0,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 0
+            },
+            {
+                "arn": "arn:aws:ecs:us-east-2:513129860875:service-revision/docker-flask-redis-cluster/docker-flask-redis-service/3378902505775611637",
+                "requestedTaskCount": 1,
+                "runningTaskCount": 1,
+                "pendingTaskCount": 0
+            }
+        ],
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-02ba53eb74ffdc8df",
+                    "subnet-07a60dda87b4718ba",
+                    "subnet-087b673342ab8a8cb"
+                ],
+                "securityGroups": [
+                    "sg-0a230d2485c5f0e94"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "healthCheckGracePeriodSeconds": 0,
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::513129860875:user/liliana-admin",
+        "enableECSManagedTags": true,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false,
+        "availabilityZoneRebalancing": "ENABLED",
+        "resourceManagementType": "CUSTOMER"
+    }
+}
